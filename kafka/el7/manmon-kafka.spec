@@ -10,10 +10,10 @@ Group: System
 Packager: Tomi Malkki
 Requires: java-1.8.0-openjdk-headless
 Source0: http://www.nic.funet.fi/pub/mirrors/apache.org/kafka/%{version}/kafka_%{kafka_scala_ver}-%{version}.tgz
-Source1: https://raw.githubusercontent.com/manmon-net/manmon-rpm-dev/master/rpm/el7/server.properties
-Source2: https://raw.githubusercontent.com/manmon-net/manmon-rpm-dev/master/rpm/el7/zookeeper.properties
-Source3: https://raw.githubusercontent.com/manmon-net/manmon-rpm-dev/master/rpm/el7/manmon-zookeeper.service
-Source4: https://raw.githubusercontent.com/manmon-net/manmon-rpm-dev/master/rpm/el7/manmon-kafka.service
+Source1: https://raw.githubusercontent.com/manmon-net/manmon-rpm-dev/master/kafka/el7/server.properties
+Source2: https://raw.githubusercontent.com/manmon-net/manmon-rpm-dev/master/kafka/el7/zookeeper.properties
+Source3: https://raw.githubusercontent.com/manmon-net/manmon-rpm-dev/master/kafka/el7/manmon-zookeeper.service
+Source4: https://raw.githubusercontent.com/manmon-net/manmon-rpm-dev/master/kafka/el7/manmon-kafka.service
 BuildRoot: ~/rpmbuild/
 
 %description
