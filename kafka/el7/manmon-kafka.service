@@ -1,0 +1,19 @@
+[Unit]
+Description=Apache Kafka server (broker)
+Documentation=http://kafka.apache.org/documentation.html
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target kafka-zookeeper.service
+
+[Service]
+Type=simple
+User=manmon-kafka
+Group=manmon-kafka
+Environment=JAVA_HOME=/usr/lib/jvm/jre
+Environment=LOG_DIR=/home/manmon-kafka/logs
+Environment=KAFKA_LOG4J_OPTS=-Dlog4j.configuration=file:/home/manmon-kafka/kafka/config/log4j.properties
+ExecStart=/home/manmon-kafka/kafka/bin/kafka-server-start.sh /home/manmon-kafka/kafka/config/server.properties
+ExecStop=/home/manmon-kafka/kafka/bin/kafka-server-stop.sh
+
+[Install]
+WantedBy=multi-user.target
+
